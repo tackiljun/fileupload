@@ -11,6 +11,7 @@ import org.astro.fileupload.dto.ProductDTO;
 import org.astro.fileupload.dto.ProductListDTO;
 import org.astro.fileupload.dto.ProductRegisterDTO;
 
+
 public interface ProductMapper {
     
     List<ProductListDTO> getList(PageRequestDTO pageRequestDTO);

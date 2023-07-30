@@ -9,13 +9,14 @@ import org.astro.fileupload.dto.ProductListDTO;
 import org.astro.fileupload.dto.ProductRegisterDTO;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Transactional
 public interface ProductService {
 
     Integer register(ProductRegisterDTO registerDTO);
 
     PageResponseDTO<ProductListDTO> list(PageRequestDTO pageRequestDTO);
-    // ///////////////<제네릭타입>
+    // ///////////////<제네릭타입>.
 
     ProductDTO get(Integer pno);
 
