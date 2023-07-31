@@ -21,6 +21,5 @@ public class ProductDTO {
     private String regDate;
     private String modDate;
 
-    private List<String> fileNames;
-    
+    private List<String> fileNames; 
 }

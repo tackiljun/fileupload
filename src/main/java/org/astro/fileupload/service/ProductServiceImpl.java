@@ -29,7 +29,6 @@ public class ProductServiceImpl implements ProductService {
     public Integer register(ProductRegisterDTO dto) {
 
         //Integer pnoResult = null;
-
         List<String> fileNames = dto.getFileNames();
 
         int count = productMapper.insertProduct(dto);
@@ -51,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
             return Map.of(
                 "uuid", uuid,
                 "fileName", fileName,
-                "pno", ""+pno, 
+                "pno", "" + pno, 
                 "ord", "" + index.getAndIncrement());
 
         }).collect(Collectors.toList());
@@ -134,5 +133,4 @@ public class ProductServiceImpl implements ProductService {
 
         log.info("countImages: "+countImages);
     }
-    
 }

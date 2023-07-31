@@ -7,5 +7,4 @@ import lombok.Data;
 public class RequestFileRemoveDTO {
     
     private String fileName;
-    
 }

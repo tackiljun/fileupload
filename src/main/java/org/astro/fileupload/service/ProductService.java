@@ -31,5 +31,4 @@ public interface ProductService {
     // 상품데이터 수정.
     // 기존의 첨부파일을 데이터베이스 내에서 삭제.
     // DTO에 있는 첨부파일을 데이터베이스에 추가.
-    
 }

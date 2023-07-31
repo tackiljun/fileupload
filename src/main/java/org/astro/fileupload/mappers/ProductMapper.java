@@ -25,7 +25,7 @@ public interface ProductMapper {
     @Select("select * from tbl_product p where p.pno = #{pno}")
     ProductDTO selectOne(Integer pno);
 
-    @Select("select concat(uuid,'_',fileName) from tbl_product_image where pno=#{pno} order by ord ")
+    @Select("select concat(uuid,'_',fileName) from tbl_product_image where pno=#{pno} order by ord")
     List<String> selectImages(Integer pno);
 
     @Update("update tbl_product set pname=#{pname}, price=#{price}, status=#{status} where pno=#{pno}")
@@ -33,6 +33,5 @@ public interface ProductMapper {
 
     @Delete("delete from tbl_product_image where pno=#{pno}")
     int deleteImages(Integer pno);
-
 }
 

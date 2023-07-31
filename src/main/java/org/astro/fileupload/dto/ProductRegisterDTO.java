@@ -14,5 +14,4 @@ public class ProductRegisterDTO {
     private boolean status;
 
     private List<String> fileNames;
-
 }

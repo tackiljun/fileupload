@@ -102,7 +102,7 @@ public class UpDownController {
             Files.probeContentType(
                 resource.getFile().toPath()));
 
-        } catch(Exception e) {
+            } catch(Exception e) {
             return ResponseEntity.internalServerError().build();
         }
         return ResponseEntity.ok().headers(headers).body(resource);
@@ -118,17 +118,17 @@ public class UpDownController {
         File originFile = new File(uploadPath, fileName);
 
         try {
-        String mimeType = Files.probeContentType(originFile.toPath());
+            String mimeType = Files.probeContentType(originFile.toPath());
 
-        if(mimeType.startsWith("image")) {
+            if(mimeType.startsWith("image")) {
 
-            File thumbFile = new File(uploadPath, "s_" + fileName);
-            thumbFile.delete();
-        }
-        originFile.delete();
+                File thumbFile = new File(uploadPath, "s_" + fileName);
+                thumbFile.delete();
+            }
+            originFile.delete();
 
         } catch (IOException e) { 
-        e.printStackTrace();
+            e.printStackTrace();
         }
 
         return Map.of("result", "success");  //리턴타입이 MAP인 이유? 제이슨형태로 처리하려고.

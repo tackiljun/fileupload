@@ -65,8 +65,7 @@ public class ProductController {
     @GetMapping("/list")
     public void list(PageRequestDTO pageRequestDTO, Model model) {
 
-        model.addAttribute("res", 
-            productService.list(pageRequestDTO));
+        model.addAttribute("res", productService.list(pageRequestDTO));
     }
 
     @GetMapping("/register")
