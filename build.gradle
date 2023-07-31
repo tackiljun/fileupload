@@ -32,6 +32,7 @@ dependencies {
 	testAnnotationProcessor 'org.projectlombok:lombok'
 
 
+
 	implementation group: 'net.coobird', name: 'thumbnailator', version: '0.4.19'
 
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
